@@ -1,0 +1,18 @@
+.tb2 {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.tb1{
+    height: 50px;
+}
+.a {
+    margin-left: auto;
+    
+}
+
+mat-button:hover {
+    color:aqua;
+    background: aqua;
+}
+.sbt{
+    margin-left: auto;
+}
