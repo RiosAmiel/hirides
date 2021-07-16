@@ -5,15 +5,22 @@
     max-width: 100%;
     height: 250px;
 }
-.tabs{
-    padding: 20px 0;
-    margin: 0 16px;
-    text-align: center;
-    cursor: pointer;
-    border-bottom: 2px solid #008f79;
+.tab1,.tab2:hover {
+    background-color: aquamarine;
 }
-.tab1, .tab1:active, .tab1:hover{
-    color: inherit;
-    text-decoration: none;
+.tabs {
+    max-width: min-content;
 }
+mat-card{
+    max-width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flexbox;
+    width: 90%;
+}
+mat-tab{
+    margin-right: 100px;
+}
+
 
