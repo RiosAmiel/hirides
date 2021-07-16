@@ -7,3 +7,12 @@
   .example-full-width {
     width: 100%;
   }
+
+  .link {
+    color: blue;
+    margin-left: 155px;
+  }
+
+  button {
+    margin-left: 210px;
+  }
