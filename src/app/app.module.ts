@@ -51,6 +51,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SellComponent } from './sell/sell.component';
 
 
 @NgModule({
@@ -60,7 +62,8 @@ import { RegisterComponent } from './register/register.component';
     ProfileComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SellComponent
     
   ],
   imports: [
@@ -101,7 +104,8 @@ import { RegisterComponent } from './register/register.component';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

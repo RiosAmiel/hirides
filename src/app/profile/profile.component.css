@@ -22,5 +22,7 @@ mat-card{
 mat-tab{
     margin-right: 100px;
 }
-
+.content{
+    padding-top: 50px;
+}
 

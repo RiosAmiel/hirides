@@ -3,14 +3,25 @@
 }
 .tb1{
     height: 50px;
-    align-items: inline; 
+    align-items: inline;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 .a {
     margin-left: auto;
+    margin-right: 10px;
+}
+a{
     margin-right: 10px;
 }
 
 mat-button:hover {
     color:aqua;
     background: aqua;
+}
+
+.logo{
+    margin-top: auto;
+    margin-bottom: auto;
 }
