@@ -27,7 +27,7 @@
 				'uid'=>$uid,
 				'un'=>$un,
 				'fn'=>$fn,
-				'iby'=>'Ramirez Chris John',
+				'iby'=>'Amiel Rios',
 				'ie'=>'ramirez@futuredev.com',
 				'idate'=>date_create()
 			];
@@ -75,12 +75,12 @@
             $encryptedPassword = $this->encrypt_password($dt->user_password);
 
             $payload = array(
-                'uname'=>$dt->user_names,
-                'pword'=>$this->encrypt_password($dt->user_password)
+                'username'=>$dt->username,
+                'user_password'=>$this->encrypt_password($dt->user_password)
             );
 
-            $sql = "INSERT INTO tbl_user( user_names, user_address, user_contact, user_email, user_password) 
-                           VALUES ('$dt->user_names', '$dt->user_address', '$dt->user_contact','$dt->user_email', '$encryptedPassword')";
+            $sql = "INSERT INTO tbl_user( username, user_contact, user_email, user_password) 
+                           VALUES ('$dt->username', '$dt->user_contact','$dt->user_email', '$encryptedPassword')";
                      
 
                            $data = array(); $code = 0; $errmsg= ""; $remarks = "";

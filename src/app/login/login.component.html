@@ -2,14 +2,19 @@
     <form class="form1">
     <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="warn">
         <mat-label>Username</mat-label>
-        <input matInput required placeholder="">
+        <input matInput required placeholder="" name="username" [(ngModel)]="username">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="warn">
         <mat-label>Password</mat-label>
-        <input matInput required placeholder="" type="password">
+        <input matInput [type]="hide ? 'password' : 'text'" name="user_password" [(ngModel)]="user_password" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
       </mat-form-field>
+      <div class="form2">
       <p class="link">Forgot Password?</p>
-      <button mat-raised-button color="primary">Log in</button>
+      <button mat-raised-button color="primary" (click)="loginUser()">Log in</button>
+    </div>
     </form>
 
 </div>

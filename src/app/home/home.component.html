@@ -5,23 +5,17 @@
   <body>
 
 <div class="content">
-    <ngb-carousel class="slider">
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="../../assets/bik1.jpg" alt="Random first slide">
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="../../assets/bik2.jpg" alt="Random second slide">
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="../../assets/bik3.jpg" alt="Random third slide">
-            </div>
-          </ng-template>
-    </ngb-carousel>
+    <mat-carousel class="slider" [hideArrows]="false" [hideIndicators]="false" color="warn">
+      <mat-carousel-slide>
+        <img class="imgslide" src="../../assets/coverbike.jpg">
+      </mat-carousel-slide>
+      <mat-carousel-slide>
+        <img class="imgslide" src="../../assets/coverbike.jpg">
+      </mat-carousel-slide>
+      <mat-carousel-slide>
+        <img class="imgslide" src="../../assets/coverbike.jpg">
+      </mat-carousel-slide>
+  </mat-carousel>
     <mat-card class="home-content">
         <div>
             <span>RECOMMENDED FOR YOU</span>

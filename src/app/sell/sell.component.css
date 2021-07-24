@@ -1,0 +1,47 @@
+.content{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.card{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+input[type="file"]{
+    display: none;
+}
+
+label{
+    background-color: #3f51b5;
+    height: 60px;
+    width: 150px;
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 3px 3px grey; 
+}
+label:hover{
+    cursor: pointer;
+    width: 160px!important;
+    height: 70px !important;
+}
+.example-full-width {
+    width: 100%;
+    position: relative;
+  }
+.sub{
+    width: 100%;
+    
+}
+.bt button{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mat-button-toggle-checked{
+    background-color: #3f51b5;
+    color: white;
+  }

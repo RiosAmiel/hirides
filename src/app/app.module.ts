@@ -53,6 +53,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SellComponent } from './sell/sell.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MatCarouselModule } from 'ng-mat-carousel';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+
+
+
+
 
 
 @NgModule({
@@ -63,7 +72,8 @@ import { SellComponent } from './sell/sell.component';
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
-    SellComponent
+    SellComponent,
+    FooterComponent
     
   ],
   imports: [
@@ -105,7 +115,11 @@ import { SellComponent } from './sell/sell.component';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    NgbModule
+    NgbModule,
+    IvyCarouselModule,
+    MatCarouselModule.forRoot(),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,5 +27,5 @@ class Get{
 		}
 		return $this->gm->sendPayload($payload, $remarks, $message, $res['code']);
 	}
-   
+}
 ?>

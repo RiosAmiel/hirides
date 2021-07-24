@@ -6,7 +6,7 @@
     align-items: inline;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 6;
 }
 .a {
     margin-left: auto;
@@ -24,4 +24,9 @@ mat-button:hover {
 .logo{
     margin-top: auto;
     margin-bottom: auto;
+    text-decoration: none;
+    color: white;
+}
+.logo img:hover{
+    width: 35px;
 }

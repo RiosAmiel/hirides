@@ -15,7 +15,7 @@
 
 
 
-	define("DBASE", "db_shopay");
+	define("DBASE", "hirides");
 	define("USER", "root");
 	define("PW", "");
 	define("SERVER", "localhost");

@@ -3,7 +3,9 @@
     max-width: 500px;
     width: 100%;
   }
-
+.form2{
+  display: flex;
+}
   .link {
     color: blue;
     margin-left: 139px;
