@@ -12,4 +12,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  card: any = [
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+    {title:'Mountain Bike', price:2000, img:'./assets/dp.png'},
+  ]
+
 }

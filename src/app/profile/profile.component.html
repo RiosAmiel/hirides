@@ -1,23 +1,41 @@
-<div class="content">
-    <mat-card>
-        <div>
-        <img src="../../assets/profbg.jpg" alt="" class="coverhead">
+<div class="container">
+    <div class="header">
+        <img src="./assets/dp.png" alt=""
+        class="dpimage">
+    </div>
+    <div class="content">
+        <div class="profileinfo">
+            <div class="profiledetails">
+                
+            </div>
         </div>
-        <div class="tabs">
-            <mat-tab-group>
-                <mat-tab label="List">
-                    Content 1
-                </mat-tab>
-                <mat-tab label="Reviews"> 
-                    Content 2 
-                </mat-tab>
-                <mat-tab disabled>
-                    <ng-template mat-tab-label>
-                        <button mat-raised-button>Edit Profile</button>
-                    </ng-template>
-                </mat-tab>
-            </mat-tab-group>
-            
+        <div class="profilelisting">
+            <div class="actions">
+                <div class="actiontitle">
+                    <p class="actiontext">This is a long title</p>
+                </div>
+                <div class="actionsearch">
+                    <form class="search-container">
+                        <input type="text" id="search-bar" placeholder="Search">
+                        <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                      </form>
+                </div>
+                <div class="actionfilter">
+                    <button mat-raised-button style="margin-top: -20px;">Filter
+                        <mat-icon aria-hidden="false">filter_list</mat-icon></button>
+                </div>
+            </div>
+            <div class="listcontent">
+                <div class="contentcard" *ngFor="let card of card">
+                    <div class="image">
+                        <img src="{{card.img}}" alt="" class="cardimage">
+                    </div>
+                    <div class="cardcontent">
+                        <p style="font-size: 14px;">{{card.title}}</p>
+                        <p style="font-size: 18px; font-weight: bold;">{{card.price |currency:'Php'}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </mat-card>
+    </div>
 </div>

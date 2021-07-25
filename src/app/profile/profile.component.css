@@ -1,28 +1,201 @@
-.coverhead{
-    object-fit: cover;
-    margin-top: 5px;
-    margin-left: 50px;
-    max-width: 100%;
-    height: 250px;
-}
-.tab1,.tab2:hover {
-    background-color: aquamarine;
-}
-.tabs {
-    max-width: min-content;
-}
-mat-card{
-    max-width: fit-content;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 20px;
-    display: flexbox;
-    width: 90%;
-}
-mat-tab{
-    margin-right: 100px;
-}
-.content{
-    padding-top: 50px;
+html {
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div {
+    margin: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+}
+
+.content {
+    width: 100%;
+    height: 70%;
+    
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > div {
+    margin: 10px;
+}
+
+.profileinfo {
+    width: 30%;
+    height: 100%;
+    
+}
+
+.profiledetails {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid #dcdcdc;
+    margin-top: 120px;
+}
+
+.profilelisting {
+    width: 70%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+    
+    border: 2px solid #dcdcdc;
+}
+
+.actions {
+    width: 100%;
+    height: 20%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.actiontitle {
+    width: 50%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.actiontext {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: -150px;
+}
+
+.actionsearch {
+    width: 30%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.actionfilter {
+    width: 20%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.listcontent {
+    width: 100%;
+    height: 80%;
+    
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.listcontent > div {
+    margin: 10px;
+}
+
+.listcontent::-webkit-scrollbar {
+    display: none;
+}
+
+.contentcard {
+    width: 200px;
+    height: 220px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.image {
+    width: 100%;
+    height: 70%;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardimage {
+    max-width: 100%;
+    /* height: auto; */
+    max-height: 100%;
+}
+
+.cardcontent {
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+    
+}
+
+.dpimage {
+    position: absolute;
+    height: auto;
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.search-container{
+    width: 120%;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+  
+  input#search-bar{
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+    border-radius: 10px;
+    
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -20px;
+  }

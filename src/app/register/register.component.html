@@ -5,19 +5,19 @@
         <input matInput required placeholder="" name="username" [(ngModel)]="username">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="warn">
-        <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" name="user_password" [(ngModel)]="user_password" required>
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
+        <mat-label>Mobile</mat-label>
+        <input matInput required placeholder="" name="user_contact" [(ngModel)]="user_contact" maxlength="11">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="warn">
         <mat-label>Email</mat-label>
         <input matInput required placeholder="" name="user_email" [(ngModel)]="user_email">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="warn">
-        <mat-label>Mobile</mat-label>
-        <input matInput required placeholder="" name="user_contact" [(ngModel)]="user_contact" maxlength="11">
+        <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" name="user_password" [(ngModel)]="user_password" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
       </mat-form-field>
       <button mat-raised-button color="primary" (click)="regUser()">Sign up</button>
     </form>

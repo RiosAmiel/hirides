@@ -33,12 +33,12 @@ export class RegisterComponent implements OnInit {
     }
     else {
     this.userInfo.username = this.username;
-    this.userInfo.user_password = this.user_password;
-    this.userInfo.user_email = this.user_email;
     this.userInfo.user_contact = this.user_contact;
+    this.userInfo.user_email = this.user_email;
+    this.userInfo.user_password = this.user_password;
 
-    // this.ds.sendApiRequest("regUser", JSON.parse(JSON.stringify(this.userInfo))).subscribe((data: any) => {
-    // });
+     this.ds.sendApiRequest("regUser", JSON.parse(JSON.stringify(this.userInfo))).subscribe((data: any) => {
+     });
     console.log(this.userInfo);
     }
   }
