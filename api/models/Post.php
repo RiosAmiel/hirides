@@ -11,7 +11,7 @@ class Post{
     }
 
 // ADD PRODUCT
-    public function addProduct($data) {
+    public function addList($data) {
 
         $code = 401;
         $payload = null;
@@ -19,14 +19,14 @@ class Post{
         $message = "Unable to retrieve data";
         $prodInfo = $data->prodInfo;
 
-        $res = $this->gm->insert('tbl_products', $prodInfo);
+        $res = $this->gm->insert('tbl_listing', $list);
 
         if($res['code']==200) {
             $code = 200;
             $payload = $res['data'];
             $remarks = "success";
             $message = "Successfully retrieved data";
-            return $this->get->pullProducts(null);
+            // return $this->get->pullProducts(null);
         }
         return $this->gm->sendPayload($payload, $remarks, $message, $code);
     }

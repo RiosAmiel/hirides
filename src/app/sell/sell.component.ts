@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { VERSION, ViewChild, ElementRef } from '@angular/core';
-
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-sell',
@@ -10,7 +10,9 @@ import { VERSION, ViewChild, ElementRef } from '@angular/core';
 })
 export class SellComponent implements OnInit {
   
-  constructor() { }
+  constructor( 
+    private ds: DataService
+    ) { }
   
   ngOnInit(): void {
   }
@@ -25,22 +27,26 @@ export class SellComponent implements OnInit {
       }
     }
   }
-  @Input() img: any;
-  @Input() itemName: any;
-  @Input() type: any;
-  @Input() condition: any;
-  @Input() price: any;
-  @Input() desc: any;
-  @Input() categ: any;
+  img: any;
+  itemName: any;
+  type: any;
+  condition: any;
+  price: any;
+  desc: any;
+  categ: any;
   list: any = {}
   addList(){
     this.list.img=this.img;
     this.list.name=this.itemName;
+    this.list.user_id="1"
     this.list.type=this.type;
     this.list.condition=this.condition;
     this.list.price=this.price;
     this.list.description=this.desc;
     this.list.category=this.categ;
+
+    this.ds.sendApiRequest("addList", JSON.parse(JSON.stringify(this.list))).subscribe((data: any) => {
+    });
     console.log(this.list);
   }
 }

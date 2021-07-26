@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
 
@@ -10,6 +11,9 @@ import { RegisterComponent } from '../register/register.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  LoginStatus = new BehaviorSubject<boolean>(null);
+  Username$ : Observable<string>;
 
   constructor(public dialog: MatDialog) { }
 
