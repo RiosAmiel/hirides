@@ -12,8 +12,8 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class HeaderComponent implements OnInit {
 
-  LoginStatus = new BehaviorSubject<boolean>(null);
-  Username$ : Observable<string>;
+  // LoginStatus = new BehaviorSubject<boolean>(true);
+  // Username$! : Observable<string>;
 
   constructor(public dialog: MatDialog) { }
 

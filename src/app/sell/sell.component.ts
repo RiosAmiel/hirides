@@ -28,12 +28,12 @@ export class SellComponent implements OnInit {
     }
   }
   img: any;
-  itemName: any;
   type: any;
+  itemName: any;
   condition: any;
+  categ: any;
   price: any;
   desc: any;
-  categ: any;
   list: any = {}
   addList(){
     this.list.img=this.img;
