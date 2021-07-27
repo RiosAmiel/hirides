@@ -21,6 +21,15 @@
 
 			switch($req[0]) {
 
+				// PULL DATA OF products table
+				case 'products':
+					if(count($req)>1) {
+						echo json_encode($get->pullProducts($req[1]), JSON_PRETTY_PRINT);
+					} else {
+						echo json_encode($get->pullProducts(null), JSON_PRETTY_PRINT);
+					}
+				break;
+
 				case 'users':
 					$d = json_decode(base64_decode(file_get_contents("php://input")));
                     if(count($req)>1) {

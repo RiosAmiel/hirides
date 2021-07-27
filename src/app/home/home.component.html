@@ -21,8 +21,17 @@
             <p class="title-text">RECOMMENDED FOR YOU</p>
         </div>
         <div class="home-content-list">
-          <div class="home-content-card-list">
-            
+          <div class="home-content-card-list" *ngFor="let products of products">
+            <div class="image">
+              <img src="{{products.img}}" alt="" class="product-image">
+            </div>
+            <div class="cardcontent">
+              <p style="font-size: 14px;">{{products.type}}</p>
+              <p style="font-size: 14px;">{{products.name}}</p>
+              <p style="font-size: 14px;">{{products.category}}</p>
+              <p style="font-size: 18px; font-weight: bold;">{{products.price |currency:'Php'}}</p>
+              <p style="font-size: 14px;">{{products.description}}</p>
+            </div>
           </div>
         </div>
     </mat-card>
