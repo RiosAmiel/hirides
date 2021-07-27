@@ -40,7 +40,7 @@
 				array_push($fields, $key);
 				array_push($values, $value);
 			}
-
+			
 			try{
 				$ctr = 0;
 				$sqlstr = "INSERT INTO $table (";

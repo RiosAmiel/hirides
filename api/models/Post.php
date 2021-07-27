@@ -17,8 +17,8 @@ class Post{
         $payload = null;
         $remarks = "failed";
         $message = "Unable to retrieve data";
-        $prodInfo = $data->prodInfo;
-
+        $list = $data->list;
+        
         $res = $this->gm->insert('tbl_listing', $list);
 
         if($res['code']==200) {

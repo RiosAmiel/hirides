@@ -5,7 +5,7 @@
             <span><h1>What are you Listing Today?</h1></span>
             <img width="200" [src]="url" alt="" style="display: hidden;" id="prev">
             <br>
-            <input type="file" id="img" name="img" accept="image/*" [(ngModel)] ="img" (change)="selectFile($event)">
+            <input type="file" id="img" name="img" accept="image/*" (change)="selectFile($event)">
             <label for="img" id="imgLabel"><mat-icon style="margin-right: 5px;">add_a_photo</mat-icon>
                 Choose a Photo
             </label>
@@ -17,7 +17,7 @@
                   <mat-option value="Road Bike">Road Bike</mat-option>
                   <mat-option value="Road Bike">Kids Bike</mat-option>
                   <mat-option value="Road Bike">Hybrid/Commuter Bike</mat-option>
-                  <mat-option value="Road Bike">Others</mat-option>
+                  <mat-option value="Others">Others</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="primary">
@@ -26,21 +26,12 @@
               </mat-form-field>
             <div class="sub">
               <h1 style="font-size: 30px;">About The Item</h1>
-              <p style="font-size:large;">Condition</p>
-              <div class="bt">
-                  <mat-button-toggle-group [(ngModel)]="condition">
-                    <mat-button-toggle value="Brand New" color="primary">Brand New</mat-button-toggle>
-                    <mat-button-toggle value="Like New" color="primary">Like New</mat-button-toggle>
-                    <mat-button-toggle value="Well Used" color="primary">Well Used</mat-button-toggle>
-                    <mat-button-toggle value="Heavily Used" color="primary">Heavily Used</mat-button-toggle>
-                  </mat-button-toggle-group>
-              </div>
-              <br>
-              <p style="font-size:large;">Price</p>
-              <div>
-                <mat-button-toggle-group style="margin-bottom: 10px;" [(ngModel)]="categ">
+              <mat-button-toggle-group style="margin-bottom: 10px;" [(ngModel)]="category">
                   <mat-button-toggle color="primary" value="For Sale">For Sale</mat-button-toggle>
                 </mat-button-toggle-group>
+              <p style="font-size:large;">Price</p>
+              <div>
+                
                 <mat-form-field class="example-full-width" appearance="outline" hideRequiredMarker color="primary">
                 <mat-label>Price PHP</mat-label>
                 <input matInput required placeholder="" name="price" type="number" inputmode="numeric" [(ngModel)]="price" autocomplete="off">
@@ -54,7 +45,7 @@
                 cdkAutosizeMinRows="1"
                 cdkAutosizeMaxRows="5"
                 rows="3" placeholder="Describe What you are selling and 
-include details a buyer might be interested in" [(ngModel)]="desc"></textarea>
+include details a buyer might be interested in also include if it is brand new of not" [(ngModel)]="desc"></textarea>
               </mat-form-field>
             </div>
             <button mat-raised-button color="primary" (click)="addList()">Submit!</button>

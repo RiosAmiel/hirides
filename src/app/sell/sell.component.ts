@@ -17,7 +17,7 @@ export class SellComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  url = "../../assets"
+  url:string =  "../../assets"
   selectFile(e: any){
     if(e.target.files){
       var reader = new FileReader();
@@ -27,23 +27,24 @@ export class SellComponent implements OnInit {
       }
     }
   }
-  img: any;
-  type: any;
+  
   itemName: any;
-  condition: any;
-  categ: any;
-  price: any;
   desc: any;
+  price: any;
+  type: any;
+  condition: any;
+  category: any;
   list: any = {}
+
   addList(){
-    this.list.img=this.img;
+    // this.list.user_id="1"
     this.list.name=this.itemName;
-    this.list.user_id="1"
+    this.list.description=this.desc;
+    this.list.price=this.price;
+    this.list.img=this.url;
     this.list.type=this.type;
     this.list.condition=this.condition;
-    this.list.price=this.price;
-    this.list.description=this.desc;
-    this.list.category=this.categ;
+    this.list.category=this.category;
 
     this.ds.sendApiRequest("addList", JSON.parse(JSON.stringify(this.list))).subscribe((data: any) => {
     });
