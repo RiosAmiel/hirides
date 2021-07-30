@@ -5,14 +5,14 @@
             <span><h1>What are you Listing Today?</h1></span>
             <img width="200" [src]="url" alt="" style="display: hidden;" id="prev">
             <br>
-            <input type="file" id="img" name="img" accept="image/*" (change)="selectFile($event)">
+            <input type="file" id="img" name="img" accept="image/*" (change)="selectFile($event)" required>
             <label for="img" id="imgLabel"><mat-icon style="margin-right: 5px;">add_a_photo</mat-icon>
                 Choose a Photo
             </label>
             <br>
-            <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-form-field appearance="fill" style="width: 100%;" hideRequiredMarker>
                 <mat-label>Type</mat-label>
-                <mat-select [(ngModel)]="type">
+                <mat-select [(ngModel)]="type" required>
                   <mat-option value="Mountain Bike">Mountain Bike</mat-option>
                   <mat-option value="Road Bike">Road Bike</mat-option>
                   <mat-option value="Road Bike">Kids Bike</mat-option>

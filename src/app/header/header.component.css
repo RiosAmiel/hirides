@@ -7,6 +7,7 @@
     position: fixed;
     top: 0;
     z-index: 6;
+    
 }
 .a {
     margin-left: auto;
@@ -26,6 +27,7 @@ mat-button:hover {
     margin-bottom: auto;
     text-decoration: none;
     color: white;
+    margin-left: 50px;
 }
 .logo img:hover{
     width: 35px;

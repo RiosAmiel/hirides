@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { VERSION, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../services/data.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-sell',
@@ -11,13 +13,14 @@ import { DataService } from '../services/data.service';
 export class SellComponent implements OnInit {
   
   constructor( 
-    private ds: DataService
+    private ds: DataService,
+    private snack: MatSnackBar
     ) { }
   
   ngOnInit(): void {
   }
 
-  url:string =  "../../assets"
+  url:string =  ""
   selectFile(e: any){
     if(e.target.files){
       var reader = new FileReader();
@@ -37,6 +40,13 @@ export class SellComponent implements OnInit {
   list: any = {}
 
   addList(){
+    if(this.itemName == null || this. desc == null || this. price == null || this. type == null){
+      this.snack.open("Please Fill up the form", 'close');
+    }
+    else if(this.category == null){
+      this.snack.open("Please click the for sale button", 'close');
+    }
+    else {
     // this.list.user_id="1"
     this.list.name=this.itemName;
     this.list.description=this.desc;
@@ -50,4 +60,5 @@ export class SellComponent implements OnInit {
     });
     console.log(this.list);
   }
+ }
 }

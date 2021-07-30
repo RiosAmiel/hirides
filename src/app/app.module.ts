@@ -58,6 +58,8 @@ import { MatCarouselModule } from 'ng-mat-carousel';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { ViewComponent } from './view/view.component';
+
 
 
 
@@ -73,7 +75,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     RegisterComponent,
     SellComponent,
-    FooterComponent
+    FooterComponent,
+    ViewComponent
     
   ],
   imports: [

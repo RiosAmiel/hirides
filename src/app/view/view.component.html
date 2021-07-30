@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="view-content">
+        <div>
+            <a href=""><mat-icon>arrow_back</mat-icon></a>
+        </div>
+        <div class="image-container">
+            <img src="{{products.img}}" alt="">
+        </div>
+        <div class="info-container">
+            <h1 class="productName">{{products.name}}</h1>
+            <h2>{{products.price | currency: 'PHP '}}</h2>
+            <hr style="width: inherit;">
+            <p>{{products.type}}</p>
+            <p class="category">{{products.category}}</p>
+            <button mat-raised-button>Buy it Now!</button>
+            <br>
+                <div style="margin-top: 10px;" class="description">
+                    <h1>Description</h1>
+                    <p>{{products.description}}</p>
+                </div> 
+        </div>
+    </div>
+</div>
+

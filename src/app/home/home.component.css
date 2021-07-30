@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    background-color: #fff;
 }
 
 .home-content{
@@ -8,7 +9,7 @@ html, body {
     margin-top: 20px;
     align-items: center;
     padding: 5px;
-    width: 90%;
+    width: 60%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,17 +24,17 @@ html, body {
 
 .home-content-title {
     width: 100%;
-    height: 5%;
-    display: flex ;
-    justify-content: center;
+    height: 10%;
+    display: flex;
+    justify-content: start;
     align-items: center;
 }
 
 .title-text {
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 24px;
     margin-top: 5px;
+    font-weight: 600;
+    margin-left: 20px;
 }
 
 .home-content-list {
@@ -45,7 +46,7 @@ html, body {
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 .home-content-list > div {
@@ -57,20 +58,25 @@ html, body {
 }
 
 .home-content-card-list {
-    width: 200px;
+    width: auto;
     height: 310px;
     display: flex;
+    margin: 0;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     background-color: white;
+}
+.home-content-card-list:hover{
+    cursor: pointer;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .image {
     width: 100%;
     height: 50%;
     padding: 5px;
-    margin-top: -5px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +97,7 @@ html, body {
 
 .content{
     padding-top: 80px;
-    
+    padding-bottom: 80px;
 }
 
 .slider {
@@ -103,5 +109,7 @@ html, body {
 
 .imgslide {
    width: 100%;
+   height: 300px;
+   image-rendering: auto;
 }
 
