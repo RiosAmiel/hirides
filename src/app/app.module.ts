@@ -59,6 +59,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ViewComponent } from './view/view.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -76,7 +77,8 @@ import { ViewComponent } from './view/view.component';
     RegisterComponent,
     SellComponent,
     FooterComponent,
-    ViewComponent
+    ViewComponent,
+    CheckoutComponent
     
   ],
   imports: [
