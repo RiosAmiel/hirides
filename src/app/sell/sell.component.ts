@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import { VERSION, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../services/data.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sell',
@@ -14,7 +14,8 @@ export class SellComponent implements OnInit {
   
   constructor( 
     private ds: DataService,
-    private snack: MatSnackBar
+    private snack: MatSnackBar,
+    private route: Router
     ) { }
   
   ngOnInit(): void {
@@ -55,7 +56,21 @@ export class SellComponent implements OnInit {
     this.list.type=this.type;
     this.list.condition=this.condition;
     this.list.category=this.category;
+    this.itemName = '';
+    this.desc = '';
+    this.price = '';
+    this.url = '';
+    this.category = '';
+    this.type = '';
+    let snackRef = this.snack.open("Successfully added item", 'close', {duration: 2000});
 
+    snackRef.afterDismissed().subscribe(() => {
+      this.route.navigate([""]);
+    });
+    
+    snackRef.onAction().subscribe(() => {
+      this.route.navigate([""]);
+    });
     this.ds.sendApiRequest("addList", JSON.parse(JSON.stringify(this.list))).subscribe((data: any) => {
     });
     console.log(this.list);

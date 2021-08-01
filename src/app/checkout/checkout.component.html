@@ -1,6 +1,7 @@
 <div class="container">
     <div class="left-side">
         <div class="left-side-title">
+            <a href="/view" style="margin-left: -650px;"><button mat-button>BACK</button></a>
             <h1 class="title">HiRides Online Bikeshop</h1>
         </div>
         <div class="left-side-input">
@@ -30,20 +31,27 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Contact Number</mat-label>
                     <span matPrefix>+63 &nbsp;</span>
-                    <input type="tel" matInput placeholder="000-000-000">
+                    <input  type="tel" matInput placeholder="000-000-000" maxlength="10">
                     <mat-icon matSuffix>mode_edit</mat-icon>
                 </mat-form-field>
                 <mat-checkbox color="primary">Save this information for next time</mat-checkbox>
             </div>
-            <button class="submit" mat-flat-button color="primary">Continue to Shipping</button>
+            <button class="submit" mat-flat-button color="primary" (click)="shipItem()">Continue to Shipping</button>
         </div>
     </div>
     <div class="right-side">
         <div class="right-side-product">
-
+            <img src="{{products.img}}" class="item">
+            <div class="right-side-prodcut-details" style="margin-left: -100px;">
+                <h1 style="font-size: 30px;">{{products.name}}</h1>
+                <h3>{{products.type}}</h3>
+                <h2>{{products.price | currency:'PHP '}}</h2>
+            </div>
         </div>
+        
         <div class="right-side-total">
-
+            <hr>
+            <span class="total">Total:</span><span class="total-price">{{products.price | currency: 'PHP '}}</span>
         </div>
     </div>
 </div>

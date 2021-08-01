@@ -2,6 +2,7 @@ import { NumberSymbol } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,13 +12,16 @@ import { DataService } from '../services/data.service';
 })
 export class ViewComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,private ds: DataService
+  constructor(private router: ActivatedRoute,private ds: DataService,private route: Router
     ) { }
   ngOnInit(): void {
     
     this.index = localStorage.getItem("index");
     console.log(this.index);
     this.pullProducts();
+  }
+  check(){
+    this.route.navigate(['/checkout']);
   }
   index: any;
   products:any;
