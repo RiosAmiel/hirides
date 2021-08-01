@@ -46,12 +46,13 @@
                 <h1 style="font-size: 30px;">{{products.name}}</h1>
                 <h3>{{products.type}}</h3>
                 <h2>{{products.price | currency:'PHP '}}</h2>
+                <h2>Shipping Fee: PHP 80.00</h2>
             </div>
         </div>
         
         <div class="right-side-total">
             <hr>
-            <span class="total">Total:</span><span class="total-price">{{products.price | currency: 'PHP '}}</span>
+            <span class="total">Total:</span><span class="total-price">{{products.price + 80| currency: 'PHP '}}</span>
         </div>
     </div>
 </div>
